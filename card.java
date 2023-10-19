@@ -1,25 +1,25 @@
 public class card {
-    protected String typeOfCard;
-    protected String numberOfTheCard;
+    public enum suitOfCard {
+        HEARTS, DIAMONDS, CLUBS, SPADES
+    }
+    protected suitOfCard suit;
 
-    public card (String typeOfCard, String numberOfTheCard) {
-        this.typeOfCard= typeOfCard;
-        this.numberOfTheCard= numberOfTheCard;
+    protected String cardValue;
+
+    public card (suitOfCard suit, String cardValue) {
+        this.suit= suit;
+        this.cardValue= cardValue;
     }
 
-    public String getTypeOfCard() {
-        return typeOfCard;
+    public suitOfCard getSuit() {
+        return suit;
     }
 
-    public void setTypeOfCard(String typeOfCard) {
-        this.typeOfCard = typeOfCard;
+    public String getCardValue() {
+        return cardValue;
     }
 
-    public String getNumberOfTheCard() {
-        return numberOfTheCard;
-    }
-
-    public void setNumberOfTheCard(String numberOfTheCard) {
-        this.numberOfTheCard = numberOfTheCard;
+    public void setCardValue(String numberOfTheCard) {
+        this.cardValue = numberOfTheCard;
     }
 }
